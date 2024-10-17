@@ -163,6 +163,7 @@
     font-weight: 400;
     outline: none;
     transition: .5s;
+    text-wrap: wrap;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -365,7 +366,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 30%));
     background-size: cover;
 }
 
@@ -373,12 +374,12 @@
 
     .carousel-header .carousel-inner .carousel-item img,
     .carousel-header .carousel-inner .carousel-item .carousel-caption {
-        height: 700px;
-        margin-top: -100px;
+        height: 100vh;
+        margin-top: -78px;
     }
 
     .carousel-header {
-        height: 700px !important;
+        height: calc(100vh - 78px) !important;
     }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon,
@@ -434,9 +435,129 @@
 /*** About End ***/
 
 
+
+/*** subsidiaries company Start ***/
+.subsidiariesBox {
+    height: 500px;
+}
+
+.subsidiaries-item {
+    height: 100%;
+}
+
+.subsidiaries-img {
+    height: 350px;
+}
+
+.subsidiaries-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.subsidiaries-title {
+    height: calc(100% - 350px);
+}
+
+
+.subsidiaries .subsidiaries-item .subsidiaries-img {
+    position: relative;
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-img .subsidiaries-icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: -50px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--bs-primary);
+    background: var(--bs-light);
+    z-index: 9;
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-img .subsidiaries-img-efects {
+    position: relative;
+    overflow: hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 100%;
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-img .subsidiaries-img-efects::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.subsidiaries .subsidiaries-item:hover .subsidiaries-img-efects::after {
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: rgba(19, 53, 123, .5);
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-img-efects img {
+    transition: 0.5s;
+}
+
+.subsidiaries .subsidiaries-item:hover .subsidiaries-img-efects img {
+    transform: scale(1.1);
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-title {
+    position: relative;
+    background: var(--bs-light);
+    transition: 0.5s;
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-title::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.5s;
+}
+
+.subsidiaries .subsidiaries-item:hover .subsidiaries-title::after {
+    height: 100%;
+    background: var(--bs-primary) !important;
+    color: var(--bs-white);
+}
+
+.subsidiaries .subsidiaries-item .subsidiaries-title .subsidiaries-title-inner,
+.subsidiaries .subsidiaries-item:hover .subsidiaries-title .subsidiaries-title-inner h4 {
+    transition: 0.5s;
+}
+
+.subsidiaries .subsidiaries-item:hover .subsidiaries-title .subsidiaries-title-inner {
+    position: relative;
+    color: var(--bs-white) !important;
+    z-index: 2;
+}
+
+.subsidiaries .subsidiaries-item:hover .subsidiaries-title .subsidiaries-title-inner h4 {
+    color: var(--bs-white);
+}
+
+/*** subsidiaries company End ***/
+
+
+
+
 /*** Services Start ***/
 .service .service-content-inner {
     transition: 0.5s;
+    height: 200px;
 }
 
 .service .service-content-inner:hover {
@@ -448,6 +569,17 @@
 .service .service-content-inner .service-content p,
 .service .service-content-inner .service-icon i {
     transition: 0.5s;
+}
+
+.service-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin: 0;
+    text-align: left;
 }
 
 .service .service-content-inner:hover .service-content h5,
