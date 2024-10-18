@@ -639,7 +639,7 @@
 }
 
 .ourTeam-item {
-    height: 400px;
+    min-height: 400px;
 }
 
 .ourTeam .ourTeam-item .ourTeam-img .ourTeam-icon {
