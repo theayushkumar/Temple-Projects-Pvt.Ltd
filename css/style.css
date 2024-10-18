@@ -1526,6 +1526,15 @@
     height: 200px;
 }
 
+.testimonial-comment p{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
 .testimonial .testimonial-carousel .owl-item.center .testimonial-item .testimonial-img {
     border: 3px solid var(--bs-white);
     border-style: dotted;
