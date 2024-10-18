@@ -596,6 +596,52 @@
     position: relative;
 }
 
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+    display: block;
+}
+
+.ourTeam .ourTeam-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    padding: 5px 30px;
+    border: 1px solid var(--bs-primary);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.ourTeam .ourTeam-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    padding: 5px 30px;
+    border: 1px solid var(--bs-primary);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.ourTeam .ourTeam-carousel .owl-nav .owl-prev i,
+.ourTeam .ourTeam-carousel .owl-nav .owl-next i {
+    color: var(--bs-primary);
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.ourTeam .ourTeam-carousel .owl-nav .owl-prev:hover,
+.ourTeam .ourTeam-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-primary);
+}
+
+.ourTeam .ourTeam-carousel .owl-nav .owl-prev:hover i,
+.ourTeam .ourTeam-carousel .owl-nav .owl-next:hover i {
+    color: var(--bs-white);
+}
+
+.ourTeam-item {
+    height: 400px;
+}
+
 .ourTeam .ourTeam-item .ourTeam-img .ourTeam-icon {
     position: absolute;
     bottom: 0;
@@ -678,6 +724,14 @@
 
 .ourTeam .ourTeam-item:hover .ourTeam-title .ourTeam-title-inner h4 {
     color: var(--bs-white);
+}
+
+.ourTeam-title-inner h4 {
+    font-size: 14px;
+}
+
+.ourTeam-title-inner p {
+    font-size: 12px;
 }
 
 
@@ -1022,10 +1076,51 @@
 }
 
 /* carousel Start */
+
+
 .ExploreTour #InternationalTab-2 .InternationalTour-carousel .international-item {
     position: relative;
     overflow: hidden;
 }
+
+
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    padding: 5px 30px;
+    border: 1px solid var(--bs-primary);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    padding: 5px 30px;
+    border: 1px solid var(--bs-primary);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-prev i,
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-next i {
+    color: var(--bs-primary);
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-prev:hover,
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-primary);
+}
+
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-prev:hover i,
+.ExploreTour .InternationalTour-carousel .owl-nav .owl-next:hover i {
+    color: var(--bs-white);
+}
+
 
 .ExploreTour #InternationalTab-2 .InternationalTour-carousel .owl-dots {
     margin-top: 30px;
@@ -1336,6 +1431,11 @@
     position: relative;
 }
 
+.testimonial-item {
+    height: 400px;
+    background: #dadada;
+}
+
 .testimonial .testimonial-carousel .testimonial-item .testimonial-img {
     position: relative;
     width: 100px;
@@ -1346,6 +1446,13 @@
     border: 3px solid var(--bs-primary);
     border-style: dotted;
     border-radius: 50%;
+}
+
+.testimonial-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .testimonial .testimonial-carousel .owl-dots {
@@ -1413,6 +1520,10 @@
     background: var(--bs-primary) !important;
     color: var(--bs-white);
     transition: 0.5s;
+}
+
+.testimonial-comment {
+    height: 200px;
 }
 
 .testimonial .testimonial-carousel .owl-item.center .testimonial-item .testimonial-img {
