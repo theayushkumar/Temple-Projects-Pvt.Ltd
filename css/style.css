@@ -419,6 +419,7 @@
     display: inline-block;
     text-transform: uppercase;
     color: var(--bs-primary);
+    font-size: clamp(12px, 2vw, 2rem);
 }
 
 .about .container .section-about-title::before {
@@ -745,6 +746,17 @@
     overflow: hidden;
     border-radius: 10px;
     z-index: 1;
+}
+
+@media screen and (max-width:420px) {
+
+    .destination-img {
+        height: 300px;
+    }
+
+    .destination-img img {
+        height: 100%;
+    }
 }
 
 .destination .tab-class .tab-content .tab-pane .destination-img .destination-overlay {
@@ -1214,6 +1226,10 @@
     padding: 0 0 20px 0;
 }
 
+.nav-item span {
+    min-width: 100px;
+}
+
 .gallery .tab-class .nav-item a.active {
     background: var(--bs-primary) !important;
 }
@@ -1481,7 +1497,7 @@
 
 .testimonial .testimonial-carousel .owl-nav .owl-prev {
     position: absolute;
-    top: -55px;
+    top: -45px;
     left: 0;
     padding: 5px 30px;
     border: 1px solid var(--bs-primary);
@@ -1491,7 +1507,7 @@
 
 .testimonial .testimonial-carousel .owl-nav .owl-next {
     position: absolute;
-    top: -55px;
+    top: -45px;
     right: 0;
     padding: 5px 30px;
     border: 1px solid var(--bs-primary);
@@ -1526,7 +1542,7 @@
     height: 200px;
 }
 
-.testimonial-comment p{
+.testimonial-comment p {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
